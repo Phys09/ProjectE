@@ -70,7 +70,7 @@ public final class ServerConfig extends BasePEConfig {
           .defineInRange("katarDeathAura", 1_000F, 0, Integer.MAX_VALUE));
       covalenceLoss = CachedDoubleValue.wrap(config, builder
           .comment(
-              "Adjusting this ratio changes how much EMC is received when burning a item. For example setting this to 0.5 will return half of the EMC cost.")
+              "This ratio multiplies the EMC received when burning a item. Ex: setting this to 0.5 will return half of the EMC cost. Be careful with values greater than 1.0.")
           .defineInRange("covalenceLoss", 1.0, 0.0, Float.MAX_VALUE));
       covalenceLossRounding = CachedBooleanValue.wrap(config, builder
           .comment(
